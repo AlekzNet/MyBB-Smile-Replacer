@@ -29,7 +29,7 @@ function SmileReplacer_process(&$message)
     global $mybb;
     $smilies = array (':)' => '😊', ':-)' => '😊', ':D' =>'😁', ':(' => '☹',  ':-(' => '☹', ';)' => '😉', ';-)' => '😉',
         ' :/' => '😕',  ':-/' => '😕', ':\\' => '😕', ':|' => '😐', ';(' => '😢',  ';-(' => '😢', ':o' => '😯', ':O' => '😮',':@'=> '😡', ':P' => '😋',
-        ':rolleyes:' => '🙄', ':angel:' => '😇', ':heart:' => '♥', ':exclamation:' => '❗', ":cool:" => '😎', ':confused:' => '😒', ':sleepy:' => '😴',
+        ':rolleyes:' => '🙄', ':angel:' => '😇', ':heart:' => '♥', ':exclamation:' => '❗', ":cool:" => '😎', ' :s ' => '😒', ':sleepy:' => '😴',
         ':blush:' => '☺', ':huh:' => '🤔');
     $message = str_replace(array_keys($smilies), array_values($smilies), $message);
     return $message;
