@@ -19,7 +19,7 @@ function SmileReplacer_info()
         "website" => "https://www.alekz.net",
         "author" => "Alekz.Net",
         "authorsite" => "https://www.alekz.net",
-        "version" => "1.0.0.1",
+        "version" => "1.0.0.2",
         "compatibility" => "18*"
     );
 }
@@ -28,8 +28,9 @@ function SmileReplacer_process(&$message)
 {
     global $mybb;
     $smilies = array (':)' => '😊', ':-)' => '😊', ':D' =>'😁', ':(' => '☹',  ':-(' => '☹', ';)' => '😉', ';-)' => '😉',
-    ' :/' => '😕',  ':-/' => '😕', ':\\' => '😕', ':|' => '😐', ';(' => '😢',  ';-(' => '😢', ':o' => '😯', ':O' => '😮',':@'=> '😡', ':P' => '😋',
-    ':rolleyes:' => '🙄', ':angel:' => '😇', ':heart:' => '♥', ':exclamation:' => '❗', ":cool:" => '😎');
+        ' :/' => '😕',  ':-/' => '😕', ':\\' => '😕', ':|' => '😐', ';(' => '😢',  ';-(' => '😢', ':o' => '😯', ':O' => '😮',':@'=> '😡', ':P' => '😋',
+        ':rolleyes:' => '🙄', ':angel:' => '😇', ':heart:' => '♥', ':exclamation:' => '❗', ":cool:" => '😎', ':confused:' => '😒', ':sleepy:' => '😴',
+        ':blush:' => '☺', ':huh:' => '🤔');
     $message = str_replace(array_keys($smilies), array_values($smilies), $message);
     return $message;
 }
